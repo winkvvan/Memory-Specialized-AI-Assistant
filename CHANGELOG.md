@@ -10,7 +10,7 @@
 - 可选 MCP 依赖：`pip install -e ".[mcp]"`
 
 ### Changed
-- 用户可见名称统一为“记忆特化型 AI 助手”
+- 用户可见名称统一为“Memory-Specialized AI Assistant”
 - 默认时区改为 UTC
 - Web 搜索和电脑操作默认关闭
 - 发布副本移除个人测试日志、规划草稿、API 测试文件、模型、音频和本机路径

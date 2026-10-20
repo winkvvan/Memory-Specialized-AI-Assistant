@@ -1,6 +1,6 @@
-# 记忆特化型 AI 助手架构文档
+# Memory-Specialized AI Assistant 架构文档
 
-> Python 代码包名保留为 `chris`，用户可见名称统一为“记忆特化型 AI 助手”。
+> Python 代码包名保留为 `chris`，用户可见名称统一为“Memory-Specialized AI Assistant”。
 
 > 所有重要设计决策都在本文件记录。修改架构前先读本文档，禁止盲目重构。
 

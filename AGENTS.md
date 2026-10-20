@@ -1,7 +1,7 @@
-# AGENTS.md — 记忆特化型 AI 助手开发契约
+# AGENTS.md — Memory-Specialized AI Assistant 开发契约
 
 > 任何参与本项目的 Agent（OpenCode / Cursor / 其他）都必须首先阅读本文件。
-> 本项目的用户可见名称是“记忆特化型 AI 助手”，Python 代码包名为 `chris`。
+> 本项目的用户可见名称是“Memory-Specialized AI Assistant”，Python 代码包名为 `chris`。
 > 它不是某一个 Agent 的项目，也不是某一个模型的项目，而是一个独立的软件系统。
 
 ## 项目身份

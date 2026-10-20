@@ -242,7 +242,7 @@ class MemoryPage(Page):
             child.destroy()
         self._details_visible = False
         memories = snapshot.get("recent_memories", [])
-        self.subtitle.configure(text="记忆特化型 AI 助手会记住")
+        self.subtitle.configure(text="Memory-Specialized AI Assistant remembers")
         if not memories:
             self.add_empty(
                 "Nothing here yet.",

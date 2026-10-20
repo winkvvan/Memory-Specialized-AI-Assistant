@@ -176,10 +176,10 @@ class MessageWidget(tk.Frame):
         page = self.theme.c("background")
         header = tk.Frame(self, bg=page)
         header.pack(fill="x", padx=(4, 12), pady=(12, 4))
-        self._avatar = Avatar(header, self.theme, "记", size=30,
+        self._avatar = Avatar(header, self.theme, "M", size=30,
                               fill=self.theme.c("avatar-chris"))
         self._avatar.pack(side="left", padx=(2, 10))
-        name = tk.Label(header, text="记忆特化型 AI 助手", bg=page, fg=self.theme.c("text-primary"),
+        name = tk.Label(header, text="Memory-Specialized AI Assistant", bg=page, fg=self.theme.c("text-primary"),
                         font=self.theme.font(10, bold=True))
         name.pack(side="left")
         self._thinking_chip = PillButton(header, self.theme, text="思考中…",

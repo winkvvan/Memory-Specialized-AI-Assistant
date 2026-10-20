@@ -2,7 +2,7 @@
 
 ## Version
 
-0.1.0 — 通用发布版（代码包名 `chris`，用户可见名称“记忆特化型 AI 助手”）。
+0.1.0 — 通用发布版（代码包名 `chris`，用户可见名称“Memory-Specialized AI Assistant”）。
 
 ## Interfaces
 

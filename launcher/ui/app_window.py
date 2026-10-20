@@ -86,7 +86,7 @@ class MainWindow:
         self._recording = False
         self._after_ids: list[str] = []
 
-        root.title("记忆特化型 AI 助手")
+        root.title("Memory-Specialized AI Assistant")
         root.geometry("1080x720")
         root.minsize(860, 580)
         root.configure(bg=self.theme.c("background"))
@@ -138,11 +138,11 @@ class MainWindow:
                                        padx=10, pady=4, font_size=11)
         self.collapse_btn.pack(side="left", padx=(0, 12))
 
-        logo = Avatar(head_inner, self.theme, "记", size=28, fill=c("avatar-chris"))
+        logo = Avatar(head_inner, self.theme, "M", size=28, fill=c("avatar-chris"))
         logo.pack(side="left", padx=(0, 10))
         brand = tk.Frame(head_inner, bg=c("surface"))
         brand.pack(side="left")
-        tk.Label(brand, text="记忆特化型", bg=c("surface"), fg=c("text-primary"),
+        tk.Label(brand, text="Memory-Specialized", bg=c("surface"), fg=c("text-primary"),
                  font=self.theme.font(13, bold=True), anchor="w").pack(anchor="w")
         tk.Label(brand, text="AI Assistant", bg=c("surface"),
                  fg=c("text-muted"), font=self.theme.font_role("caption"),
@@ -367,7 +367,7 @@ class MainWindow:
         if self.vm:
             self.vm.set_status("IDLE")
             self.vm.set_provider_status("UNKNOWN")
-        self.chat.add_message("chris", "记忆特化型 AI 助手已就绪。开始对话吧。", self._time_str())
+        self.chat.add_message("chris", "Memory-Specialized AI Assistant 已就绪。开始对话吧。", self._time_str())
         self._update_status()
         self._sync_voice_ui()
         threading.Thread(target=self._health_check, daemon=True).start()
@@ -384,7 +384,7 @@ class MainWindow:
         except Exception:  # noqa: BLE001
             pass
         self.chat.add_error(
-            "记忆特化型 AI 助手暂时无法启动。",
+            "Memory-Specialized AI Assistant 暂时无法启动。",
             message,
         )
 
@@ -668,9 +668,9 @@ class MainWindow:
                 )
             if not hicon:
                 return
-            self._tray = TrayIcon("记忆特化型 AI 助手", hicon, lambda mid: self.root.after(0, lambda: self._tray_action(mid)))
+            self._tray = TrayIcon("Memory-Specialized AI Assistant", hicon, lambda mid: self.root.after(0, lambda: self._tray_action(mid)))
             menu = [(TRAY_OPEN, "Open"), (TRAY_PAUSE, "Pause"), (TRAY_DEV, "Developer Mode"), (TRAY_QUIT, "Quit")]
-            self._tray_active = self._tray.start(menu, "记忆特化型 AI 助手")
+            self._tray_active = self._tray.start(menu, "Memory-Specialized AI Assistant")
         except Exception:  # noqa: BLE001
             self._tray_active = False
 
