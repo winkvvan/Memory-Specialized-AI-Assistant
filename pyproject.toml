@@ -1,0 +1,13 @@
+[project]
+name = "memory-specialized-ai-assistant"
+version = "0.1.0"
+description = "A memory-specialized personal AI assistant with pluggable LLM, ASR and TTS APIs."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.28"]
+
+[tool.setuptools.packages.find]
+include = ["chris*", "launcher*", "mcp_server*"]

@@ -1,0 +1,146 @@
+{
+  "llm": {
+    "provider": "mock",
+    "model": "",
+    "options": {}
+  },
+  "personality_file": "data/personality.json",
+  "memory_file": "data/chats/memory.json",
+  "world_state_file": "data/world.json",
+  "temporal_file": "data/temporal.json",
+  "log_file": "data/chris.log",
+  "log_level": "INFO",
+  "max_response_tokens": 512,
+  "time_threshold_hours": [1, 8, 24],
+  "clock_mode": "real",
+  "time_scale": 1.0,
+  "timezone": "UTC",
+  "test_mode": false,
+  "memory": {
+    "active_limit": 5000,
+    "archive_limit": 100000,
+    "compression_threshold": 365,
+    "gc_enabled": true,
+    "reinforce_diminish": 0.85,
+    "remember_importance": 0.99,
+    "remember_min_life": 70.0,
+    "maintenance_interval_seconds": 300,
+    "decay": {
+      "TEMPORARY": 7.0,
+      "EPISODIC": 30.0,
+      "PREFERENCE": 180.0,
+      "SEMANTIC": 365.0,
+      "RELATIONSHIP": 365.0
+    },
+    "type_params": {
+      "PREFERENCE": {
+        "initial_life": 50.0,
+        "half_life_days": 180.0,
+        "importance": 0.7
+      },
+      "EVENT": {
+        "initial_life": 25.0,
+        "half_life_days": 14.0,
+        "importance": 0.15
+      }
+    },
+    "retrieval": {
+      "mode": "hybrid",
+      "semantic_enabled": true,
+      "semantic_top_k": 20,
+      "keyword_top_k": 20,
+      "final_top_k": 5,
+      "semantic_weight": 0.6,
+      "keyword_weight": 0.4,
+      "semantic_min_similarity": 0.25
+    },
+    "embedding": {
+      "provider": "mock",
+      "model": "mock-embedding-v1",
+      "dimension": 64
+    }
+  },
+  "world_sensor": "none",
+  "world_poll_interval": 0,
+  "tools": {
+    "enabled": true,
+    "timeout": 30.0,
+    "web_search": {
+      "enabled": false,
+      "provider": "duckduckgo",
+      "max_results": 5,
+      "timeout": 10.0,
+      "snippet_max_chars": 300
+    },
+    "filesystem": {
+      "workspace_root": "workspace",
+      "max_read_bytes": 1048576,
+      "max_write_bytes": 1048576,
+      "max_results": 200,
+      "max_directory_entries": 500,
+      "max_search_depth": 20,
+      "reject_sensitive": false
+    },
+    "coding": {
+      "workspace_root": "workspace",
+      "command": "opencode",
+      "default_timeout_seconds": 120,
+      "max_timeout_seconds": 600
+    },
+    "computer": {
+      "enabled": false,
+      "backend": "fake",
+      "default_timeout_seconds": 10,
+      "max_timeout_seconds": 60,
+      "max_actions_per_sequence": 20,
+      "max_type_text_length": 2000
+    },
+    "permission_confirmation": {
+      "default_ttl_seconds": 60,
+      "max_ttl_seconds": 300
+    }
+  },
+  "voice": {
+    "enabled": false,
+    "asr": {
+      "enabled": false,
+      "provider": "api",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "CHRIS_API_KEY",
+      "command": [],
+      "timeout_seconds": 120.0,
+      "model": "whisper-1",
+      "language": "zh"
+    },
+    "tts": {
+      "enabled": false,
+      "provider": "api",
+      "base_url": "https://api.openai.com/v1",
+      "api_key_env": "CHRIS_API_KEY",
+      "voice": "alloy",
+      "model": "tts-1",
+      "response_format": "wav",
+      "timeout_seconds": 60.0,
+      "auto_start": false,
+      "command": [],
+      "cuda_bin": "",
+      "voice_spk": "",
+      "voice_rvq": "",
+      "voice_ref_text": "",
+      "seed": -1
+    },
+    "input": {
+      "enabled": false,
+      "backend": "windows",
+      "sample_rate": 16000,
+      "channels": 1,
+      "max_duration_seconds": 30.0,
+      "device": ""
+    },
+    "output": {
+      "enabled": false,
+      "backend": "windows",
+      "volume": 1.0
+    }
+  }
+}
