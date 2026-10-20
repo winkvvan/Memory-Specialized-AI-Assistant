@@ -19,6 +19,8 @@ python launcher\launcher.py
 - `config.json` 是通用默认配置，可安全提交
 - 环境变量优先于配置中的非敏感选项
 - API Key 使用 `CHRIS_API_KEY` 或各适配器配置的 `api_key_env`
+- 首次运行从 `templates/` 生成可编辑的人格与记忆文件
+- 修改 `data/personality.json` 或 `data/chats/memory.json` 前先停止程序并备份
 
 ## Main Interfaces
 
@@ -37,6 +39,7 @@ python scripts/check_project_safety.py
 ## Safety
 
 - 不提交 `data/`
+- 不提交个人记忆、人格、测试对话或备份
 - 不提交密钥、模型、个人音频
 - 不直接覆盖旧数据；Schema 变更必须迁移并备份
 - 工具执行默认遵循权限策略

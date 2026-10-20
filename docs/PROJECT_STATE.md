@@ -21,6 +21,14 @@
 - `memory.embedding.provider = mock`
 - API Key 只从环境变量读取
 
+## Editable State
+
+- 首次运行从 `templates/personality.json` 生成 `data/personality.json`
+- 首次运行从 `templates/memory.json` 生成 `data/chats/memory.json`
+- 已存在的状态文件不会被覆盖
+- 人格、记忆、备份和运行时缓存均不进入版本库
+- 修改方式见 README 的“修改人格”“修改记忆”“备份与恢复”章节
+
 ## Verification
 
 发布前应在 Python 3.11+ 环境运行：

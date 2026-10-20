@@ -502,7 +502,7 @@ def print_provider_health(runtime: Runtime) -> None:
 
 
 def run_cli(runtime: Runtime) -> None:
-    print("Chris ready. Type a message, or 'quit' to exit.")
+    print(f"{runtime.personality.core.name} ready. Type a message, or 'quit' to exit.")
     runtime.temporal.start_session()
     runtime.temporal.start_ticker(interval=1.0)
     try:

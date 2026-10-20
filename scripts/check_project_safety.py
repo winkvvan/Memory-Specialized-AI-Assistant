@@ -26,6 +26,9 @@ REQUIRED_FILES = [
     ".gitignore",
     "config.json",
     "pyproject.toml",
+    "templates/personality.json",
+    "templates/memory.json",
+    "templates/memory.archive.json",
 ]
 
 REQUIRED_DIRS = [

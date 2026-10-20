@@ -44,7 +44,7 @@ class TestRealModelLive(unittest.TestCase):
             encoding="utf-8",
         )
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn("Chris>", result.stdout)
+        self.assertIn("Assistant>", result.stdout)
 
 
 if __name__ == "__main__":

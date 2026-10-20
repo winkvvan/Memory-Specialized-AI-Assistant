@@ -9,6 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from chris.behavior.engine import BehaviorEngine, RuleBasedBehaviorEngine
+from chris.bootstrap import ensure_default_state_files
 from chris.config import Config
 from chris.embedding.cache import EmbeddingCache
 from chris.embedding.factory import create_embedding_provider_from_config
@@ -263,6 +264,7 @@ def process_recall_intent(
 
 def build_runtime(config: Config | None = None, **overrides: object) -> Runtime:
     cfg = config or Config.load()
+    ensure_default_state_files(cfg)
     bus = EventBus()
     provider = overrides.get("provider") or create_provider(cfg.llm)
     personality_store = VersionedPersonalityStore(cfg.resolve(cfg.personality_file))

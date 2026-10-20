@@ -4,6 +4,7 @@ __pycache__/
 .vs/
 .pytest_cache/
 data/
+data-backup-*/
 .venv/
 venv/
 launcher/build/

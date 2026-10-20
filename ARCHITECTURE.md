@@ -64,6 +64,14 @@ Qwen / DeepSeek / 本地模型 / API 模型时不得破坏它们。
 
 ## 4. 目录结构
 
+### 4.1 首次启动状态模板
+
+仓库只提交 `templates/` 中的通用人格和空记忆模板。`build_runtime()` 在
+`cfg.test_mode == false` 时调用 `chris/bootstrap.py::ensure_default_state_files()`：
+仅为项目 `data/` 下缺失的 `personality_file` 与 `memory_file` 复制模板。
+已有文件不覆盖；外部自定义数据路径由用户自行复制模板。该层只做文件初始化，
+不改变人格或记忆的公共接口。
+
 ```
 chris/
 ├── __init__.py        # 包说明与版本
@@ -92,6 +100,7 @@ chris/
 └── behavior/          # 行为引擎
     └── engine.py
 tests/                 # unittest 测试（零第三方依赖）
+templates/             # 通用人格/记忆模板，首次运行复制到 data/
 config.json            # 运行配置
 data/                  # 运行时状态（自动生成，gitignore）
 ```

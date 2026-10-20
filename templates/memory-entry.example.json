@@ -1,0 +1,20 @@
+{
+  "memory_id": "replace-with-a-unique-id",
+  "kind": "fact",
+  "content": "Example: the assistant should answer in Chinese.",
+  "summary": "Language preference",
+  "importance": 0.8,
+  "timestamp": "2026-01-01T00:00:00+00:00",
+  "metadata": {
+    "role": "user"
+  },
+  "memory_type": "PREFERENCE",
+  "source": "EXPLICIT_USER",
+  "confidence": 0.9,
+  "status": "ACTIVE",
+  "storage_tier": "ACTIVE",
+  "tags": [
+    "example"
+  ],
+  "pinned": false
+}
